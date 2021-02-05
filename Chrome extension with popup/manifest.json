@@ -1,0 +1,22 @@
+{
+    "name": "Basic Extensions",
+    "description" : "Very basic extension by a student.",
+    "version": "0.0",
+    "manifest_version": 2,
+    "icons":{
+        "128" : "logo.png"
+    },
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_title" :"extension for the assistance"
+    },
+    "content_scripts" :[
+      {
+        "matches":["<all_urls>"],
+        "js":["script.js"]
+      }
+    ],
+    "background" : ["script.js"],
+    "permissions" :["activeTab"]
+
+  }
